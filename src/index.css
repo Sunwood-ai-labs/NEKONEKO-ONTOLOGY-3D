@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Noto Sans JP', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --nni-bg: #fafafb;
+    --nni-surface: #ffffff;
+    --nni-surface-elevated: #ffffff;
+    --nni-surface-soft: #eff7fb;
+    --nni-border: #d5e6f0;
+    --nni-text: #1a1f4a;
+    --nni-text-muted: #4b5a7a;
+    --nni-primary: #1a1f4a;
+    --nni-primary-hover: #28316e;
+    --nni-primary-fg: #ffffff;
+    --nni-accent: #2bb0bf;
+    --nni-coral: #ff7069;
+    --nni-sun: #fff390;
+    --nni-sky: #b4e5f2;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--nni-bg);
+    color: var(--nni-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
